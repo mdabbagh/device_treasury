@@ -19,7 +19,7 @@ For running and updating code locally or on a server you own, read the Docker/Lo
 ### Docker
 
 1. Install Docker
-2. Create local dev.env file in the top project directory
+2. Create local .env file in the top project directory
 3. Run docker-compose up
 4. Run docker-compose exec app bundle exec rails db:setup db:migrate
 
