@@ -1,0 +1,2 @@
+CREATE USER dtreasury;
+ALTER USER dtreasury WITH SUPERUSER;

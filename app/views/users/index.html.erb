@@ -1,0 +1,29 @@
+<% provide(:title, "All users") %>
+<h1> All Users </h1>
+<% if current_user.admin? %>
+  <div>
+    <%= button_to "Add User", new_user_path, method: :get, class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+<div class="pagination">
+  <%= will_paginate %>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @users %>
+  </tbody>
+</table>
+
+<div class="pagination">
+  <%= will_paginate %>
+</div>

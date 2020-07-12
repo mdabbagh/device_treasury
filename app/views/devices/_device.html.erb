@@ -1,0 +1,18 @@
+<tr>
+  <td><%= link_to device.tag, device %></td>
+  <td><%= device.category %></td>
+  <td><%= device.make %></td>
+  <td><%= device.model %></td>
+  <td>
+    <% if device.available %>
+      <%= link_to "Checkout", checkout_path(id: device.id), method: :post, class: "btn btn-success btn-check" %>
+    <% elsif !device.available && (device.users.last == current_user) %>
+      <%= link_to "Checkin", checkin_path(id: device.id), method: :post, class: "btn btn-primary btn-check" %>
+    <% end %>
+  </td>
+  <% if current_user.admin? %>
+    <td><%= link_to "edit", edit_device_path(device) %></td>
+    <td><%= link_to "delete", device, method: :delete,
+        data: { confirm: "You sure?" } %></td>
+  <% end %>
+</tr>

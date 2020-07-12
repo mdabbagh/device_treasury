@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+availDevice:
+  tag: Dev1
+  category: MyString
+  make: MyString
+  model: MyString
+  color: MyString
+  memory: 1
+  os: MyString
+  features: MyString
+  passcode: MyString
+  available: true
+
+unavailDeviceOne:
+  tag: Dev2
+  category: MyString
+  make: MyString
+  model: MyString
+  color: MyString
+  memory: 1
+  os: MyString
+  features: MyString
+  passcode: MyString
+  available: false
+
+unavailDeviceTwo:
+  tag: Dev3
+  category: MyString
+  make: MyString
+  model: MyString
+  color: MyString
+  memory: 1
+  os: MyString
+  features: MyString
+  passcode: MyString
+  available: false

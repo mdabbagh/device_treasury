@@ -1,0 +1,19 @@
+<% provide(:title, @user.name) %>
+
+<h1>
+  <%= @user.name %>
+</h1>
+<h2>
+  <%= @user.email %>
+</h2>
+
+<div class="checkout_history">
+  <h3>Checkout History</h3>
+  <div class="pagination">
+    <%= will_paginate @checkouts %>
+  </div>
+  <%= render 'shared/checkout_history' %>
+  <div class="pagination">
+    <%= will_paginate @checkouts %>
+  </div>
+</div>

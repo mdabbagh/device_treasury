@@ -1,0 +1,18 @@
+<table class="table table-sm">
+  <tbody>
+    <% @checkouts.each do |checkout| %>
+      <tr>
+        <td>
+          <%= checkout.created_at.in_time_zone('Eastern Time (US & Canada)').strftime("%m/%d/%Y %I:%M%p") %>
+            - Device <%= checkout.device.tag %> 
+            <% if checkout.action == "checkout" %>
+              checked out by
+            <% else %>
+              checked in by
+            <% end %>
+          <%= link_to checkout.user.name, checkout.user %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

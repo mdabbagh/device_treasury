@@ -1,0 +1,55 @@
+<% provide(:title, @device.tag) %>
+
+<h2>Device Details</h2>
+<table class="table">
+  <tbody>
+    <tr>
+      <th>Tag</td>
+      <td><%= @device.tag %></td>
+    </tr>
+    <tr>
+      <th>Category</td>
+      <td><%= @device.category %></td>
+    </tr>
+    <tr>
+      <th>Make</td>
+      <td><%= @device.make %></td>
+    </tr>
+    <tr>
+      <th>Model</td>
+      <td><%= @device.model %></td>
+    </tr>
+    <tr>
+      <th>Color</td>
+      <td><%= @device.color %></td>
+    </tr>
+    <tr>
+      <th>Memory (GB)</td>
+      <td><%= @device.memory %></td>
+    </tr>
+    <tr>
+      <th>OS</td>
+      <td><%= @device.os %></td>
+    </tr>
+    <tr>
+      <th>Features</td>
+      <td><%= @device.features %></td>
+    </tr>
+    <tr>
+      <th>Passcode</td>
+      <td><%= @device.passcode %></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="checkout_history">
+  <h3>Checkout History</h3>
+  <div class="pagination">
+    <%= will_paginate @checkouts %>
+  </div>
+  <%= render 'shared/checkout_history' %>
+  <div class="pagination">
+    <%= will_paginate @checkouts %>
+  </div>
+</div>
+
